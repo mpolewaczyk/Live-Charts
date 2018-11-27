@@ -138,6 +138,20 @@ namespace LiveCharts.Wpf
         /// </summary>
         public static readonly DependencyProperty GroupingProperty =
             DependencyProperty.Register("Grouping", typeof(object), typeof(StackedColumnSeries), new PropertyMetadata(null));
+
+        /// <summary>
+        /// The maximum column width property
+        /// </summary>
+        public static readonly DependencyProperty ShowIfZeroProperty = DependencyProperty.Register(
+            "ShowIfZero", typeof(bool), typeof(StackedColumnSeries), new PropertyMetadata(default(bool)));
+        /// <summary>
+        /// Gets or sets the maximum width of a column, any column will be capped at this value
+        /// </summary>
+        public bool ShowIfZero
+        {
+            get { return (bool)GetValue(ShowIfZeroProperty); }
+            set { SetValue(ShowIfZeroProperty, value); }
+        }
         #endregion
 
         #region Overridden Methods
