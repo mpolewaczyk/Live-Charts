@@ -33,25 +33,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugGeared|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;GEARED;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseGeared|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>GEARED;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -287,10 +268,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\LiveCharts.Wpf.Geared\LiveCharts.Wpf.Geared.csproj" Condition="'$(Configuration)' == 'DebugGeared' OR '$(Configuration)' == 'ReleaseGeared'">
-      <Project>{a1a5d617-53f2-4dfc-9b72-05ace8c2c08c}</Project>
-      <Name>LiveCharts.Wpf.Geared</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\LiveCharts.Core\LiveCharts.Core.csproj">
       <Project>{8caf054c-fb7c-405b-889d-59048650f4b4}</Project>
       <Name>LiveCharts.Core</Name>
